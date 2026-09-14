@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RunMode</title>
+<style>
+  :root{
+    --bg:#faf9fd;
+    --surface:#ffffff;
+    --border:#e6e1f5;
+    --text:#201a30;
+    --text-dim:#5c5470;
+    --text-faint:#8b83a0;
+    --purple:#6b4bd6;
+    --purple-deep:#4a2fb0;
+    --purple-dim:#f1eefc;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#15111f; --surface:#1e1830; --border:#332a4d;
+      --text:#f1eef8; --text-dim:#c3b9db; --text-faint:#8f84ab;
+      --purple:#a892f0; --purple-deep:#7d63d6; --purple-dim:#241c3a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#15111f; --surface:#1e1830; --border:#332a4d;
+    --text:#f1eef8; --text-dim:#c3b9db; --text-faint:#8f84ab;
+    --purple:#a892f0; --purple-deep:#7d63d6; --purple-dim:#241c3a;
+  }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--text);
+    font:16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .container{ max-width:720px; margin:0 auto; padding-inline:20px; }
+  a{ color:var(--purple); }
+  .hero{
+    background:
+      radial-gradient(120% 140% at 15% -10%, var(--purple-deep) 0%, transparent 55%),
+      linear-gradient(180deg, var(--purple) 0%, var(--purple-deep) 55%, var(--bg) 100%);
+    padding-block:56px 84px; color:#fff;
+  }
+  .wordmark{ font-size:15px; font-weight:800; letter-spacing:.04em; text-transform:uppercase;
+    display:inline-flex; align-items:center; gap:8px; color:#fff; opacity:.92; }
+  .wordmark::before{ content:""; width:9px; height:9px; border-radius:3px; background:#fff; display:inline-block; }
+  h1{ font-size:clamp(30px,5.4vw,44px); line-height:1.12; letter-spacing:-0.015em;
+    margin:26px 0 14px; text-wrap:balance; max-width:11.5ch; }
+  .kicker{ font-size:17px; line-height:1.55; color:#fff; opacity:.86; max-width:46ch; margin:0; }
+  main{ padding-block:0 64px; }
+  section{ padding-block:44px; border-bottom:1px solid var(--border); }
+  section:last-of-type{ border-bottom:none; }
+  h2{ font-size:13px; font-weight:800; letter-spacing:.07em; text-transform:uppercase; color:var(--purple); margin:0 0 14px; }
+  .lede{ font-size:18px; line-height:1.6; color:var(--text); max-width:56ch; margin:0; }
+  .lede + .lede{ margin-top:14px; }
+  .points{ display:grid; gap:14px; margin-top:22px; }
+  .point{ background:var(--surface); border:1px solid var(--border); border-radius:14px;
+    padding:20px 22px; display:grid; grid-template-columns:auto 1fr; gap:16px; align-items:start; }
+  .point .num{ font:800 13px/1 ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    color:var(--purple); background:var(--purple-dim); border-radius:8px;
+    width:26px; height:26px; display:flex; align-items:center; justify-content:center; margin-top:2px; }
+  .point h3{ font-size:16px; margin:0 0 4px; }
+  .point p{ margin:0; color:var(--text-dim); font-size:14.5px; line-height:1.55; }
+  .thread{ margin-top:22px; padding:16px 18px; border-radius:12px; background:var(--purple-dim);
+    border:1px solid var(--border); font-size:14.5px; color:var(--text); }
+  .thread b{ color:var(--purple); }
+  .status ul{ list-style:none; padding:0; margin:18px 0 0; display:flex; flex-direction:column; gap:10px; }
+  .status li{ display:flex; gap:10px; font-size:15px; color:var(--text-dim); align-items:baseline; }
+  .status li::before{ content:"—"; color:var(--purple); flex-shrink:0; }
+  .cta-box{ background:var(--surface); border:1px solid var(--border); border-radius:16px;
+    padding:28px 26px; display:flex; flex-wrap:wrap; gap:20px; align-items:center; justify-content:space-between; }
+  .cta-box p{ margin:0; font-size:15px; color:var(--text-dim); max-width:38ch; }
+  .btn{ display:inline-flex; align-items:center; gap:8px; background:var(--purple); color:#fff;
+    font-weight:700; font-size:15px; padding:13px 22px; border-radius:10px; text-decoration:none; white-space:nowrap; }
+  .btn:hover{ background:var(--purple-deep); }
+  footer{ padding-block:28px 48px; }
+  footer .row{ display:flex; flex-wrap:wrap; gap:8px 18px; align-items:center; font-size:13px; color:var(--text-faint); }
+  footer a{ color:var(--text-faint); }
+  footer a:hover{ color:var(--purple); }
+  img{ max-width:100%; }
+  @media (max-width:480px){
+    .point{ grid-template-columns:1fr; }
+    .cta-box{ flex-direction:column; align-items:flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="container">
+    <span class="wordmark">RunMode</span>
+    <h1>Your training data, and the receipts.</h1>
+    <p class="kicker">The running coach that shows its working — every number traces to your real Apple Health data or a real computation, or it says so.</p>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+
+    <section>
+      <h2>The problem</h2>
+      <p class="lede">Running apps invent things. A recovery score with no visible inputs. A "readiness" number that appears from nowhere. An AI summary that sounds confident about data it doesn't have. You can't tell which numbers are measured and which are guessed — so you can't trust any of them.</p>
+      <p class="lede"><strong>Closed apps are a black box. Conversational AI coaches blind. RunMode has your real data and explains every decision — and you can check the maths.</strong></p>
+    </section>
+
+    <section>
+      <h2>What it does</h2>
+      <div class="points">
+        <div class="point">
+          <span class="num">1</span>
+          <div><h3>Readiness you can take apart</h3><p>A daily readiness score built from real training load, resting heart rate, sleep, and anything you've logged — anchored to the race you're training for. Tap it and it breaks into the real terms that produced it. Not good enough data? It shows "—", not a confident guess.</p></div>
+        </div>
+        <div class="point">
+          <span class="num">2</span>
+          <div><h3>Pacing that accounts for the weather</h3><p>Race-day forecast — temperature, humidity, dew point — turned into an honest pace range for the conditions. A range, never a false-precision target.</p></div>
+        </div>
+        <div class="point">
+          <span class="num">3</span>
+          <div><h3>Session forensics</h3><p>Per-run analysis: real elevation, pace splits, heart-rate zones, route with segment detail, personal bests, your own notes. All from your data, explained in plain language.</p></div>
+        </div>
+        <div class="point">
+          <span class="num">4</span>
+          <div><h3>Race prep, end to end</h3><p>Event setup with a goal estimate derived from your own recent runs, fuel guidance, course import. No generic plan — the numbers come from you.</p></div>
+        </div>
+      </div>
+      <div class="thread"><b>The thread through all four:</b> it's plan-free. RunMode doesn't hand you a rigid twelve-week schedule and defend it. It coaches off what's actually happening in your life and your data.</div>
+    </section>
+
+    <section class="status">
+      <h2>Where it's at</h2>
+      <p class="lede">Pre-launch. Nothing here is inflated to sound further along than it is.</p>
+      <ul>
+        <li>Built and in active development by a solo founder, tested daily on his own real running data.</li>
+        <li>Currently in private testing on the founder's own device via TestFlight.</li>
+        <li>Health data used by the AI coach is sent to Google's Gemini API to generate responses — that's the one thing that leaves your device, and it's stated here plainly rather than glossed over.</li>
+        <li>Opening to outside runners once a small number of privacy and store-compliance items are finished.</li>
+      </ul>
+    </section>
+
+    <section class="cta">
+      <h2>Stay in the loop</h2>
+      <div class="cta-box">
+        <p>No beta to join yet, no download, no date set. Get told the moment that changes.</p>
+        <a class="btn" href="mailto:info@runmode.app?subject=Get%20told%20when%20RunMode%20opens">Get told when it opens →</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container row">
+    <span>&copy; 2026 RunMode Ltd</span>
+    <a href="mailto:info@runmode.app">info@runmode.app</a>
+    <a href="/privacy">Privacy</a>
+  </div>
+</footer>
+
+</body>
+</html>
