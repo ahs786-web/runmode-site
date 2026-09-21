@@ -31,19 +31,19 @@
 <body>
 
 <h1>RunMode — Privacy Policy</h1>
-<p class="updated">Last updated: <span class="placeholder">15 September 2026</span></p>
+<p class="updated">Last updated: 21 September 2026</p>
 
 <p class="lead">RunMode is a running and endurance-training app for iPhone. It is built around a simple principle: your training and health data stays on your device. This policy explains the few things that leave your device, who receives them, and why — in plain English.</p>
 
 <div class="box">
-<strong>The short version.</strong> Almost everything RunMode does happens on your iPhone. Your Apple Health data, workouts, routes, personal bests, notes and coach conversations are stored and processed on the device and are never sent to us — in fact, there is no RunMode server and we never see your data. Three optional features send a limited amount of data to third parties: the AI coach (to Google), and weather (to Apple and to Open-Meteo). We do not track you, run no analytics, show no ads, and never sell your data.
+<strong>The short version.</strong> Almost everything RunMode does happens on your iPhone. Your Apple Health data, workouts, routes, personal bests, notes and coach conversations are stored and processed on the device and are never sent to us — in fact, there is no RunMode server and we never see your data. A few optional features send a limited amount of data off your device: the AI coach (to Apple's private models on iPhones that support Apple Intelligence, otherwise to Google) and weather (to Apple and to Open-Meteo). We do not track you, run no analytics, show no ads, and never sell your data.
 </div>
 
 <h2>1. Who we are</h2>
-<p>RunMode ("RunMode", "we", "us") is operated by <span class="placeholder">RunMode Ltd</span>, a data controller based in the United Kingdom.</p>
+<p>RunMode ("RunMode", "we", "us") is operated by RunMode Ltd, a data controller based in the United Kingdom.</p>
 <ul>
   <li><strong>Contact:</strong> <a href="mailto:info@runmode.app">info@runmode.app</a></li>
-  <li><strong>ICO registration:</strong> <span class="placeholder">ZC248316</span></li>
+  <li><strong>ICO registration:</strong> ZC248316</li>
 </ul>
 <p>We are the "controller" of the personal data described below for the purposes of the UK GDPR and the Data Protection Act 2018.</p>
 
@@ -60,10 +60,10 @@
 <h2>3. What leaves your device</h2>
 <p>There are exactly three features that send data off your device, each to a named third party, each only to make that feature work.</p>
 
-<h3>(a) The AI coach — Google Gemini (optional)</h3>
-<p>If, and only if, you use the AI coach (by opening a coach chat, or by receiving a coaching notification you enabled), RunMode sends the training context needed to answer your question to <strong>Google's Gemini API</strong> to generate the response. This includes: your readiness score and what fed it, recent workout summaries (activity type, distance, duration, pace, heart-rate zones, training-load ratio), sleep hours, any symptoms or feel notes you logged, your target event, your age, and the messages you type.</p>
-<p>We <strong>do not</strong> send your name, email address, precise location, or any account identifier — Google receives training data, not your identity.</p>
-<p>RunMode uses Google's <strong>paid Gemini API tier</strong>. Under Google's terms for that tier, your prompts and responses are <strong>not used to train or improve Google's models</strong>; Google retains them only briefly for abuse-detection, safety and legal purposes. The data still leaves your device to Google, so if you would prefer that nothing be sent to a third party, simply do not use the coach — every figure the coach uses is also shown in the app itself. Google's handling is governed by the <a href="https://ai.google.dev/gemini-api/terms" rel="noopener">Google Gemini API terms</a> and the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.</p>
+<h3>(a) The AI coach — Apple Intelligence or Google Gemini (optional)</h3>
+<p>The AI coach runs only if you use it — by opening a coach chat, or by receiving a coaching notification you enabled. When it runs, your question and the training context needed to answer it are processed by an AI model. <strong>Which model depends on your iPhone</strong>, and the coach follows the same coaching rules whichever engine answers. The context can include: your readiness score and what fed it, recent workout summaries (activity type, distance, duration, pace, heart-rate zones, training-load ratio), sleep hours, any symptoms or feel notes you logged, your target event, your age, and the messages you type. In every case we <strong>do not</strong> send your name, email address, precise location, or any account identifier.</p>
+<p><strong>On iPhones that support Apple Intelligence</strong> (and unless you turn Apple Intelligence off under Profile → Coach), the coach uses Apple's models first: short coaching notifications are generated by Apple's <strong>on-device</strong> model (kept on the phone), and full coach chats use <strong>Apple Private Cloud Compute</strong>, Apple's privacy-preserving cloud. Apple states that data sent to Private Cloud Compute is not retained after your request is fulfilled and is not used to train Apple's models. If Apple's model is ever unavailable or declines a request (for example when a device usage limit is reached), the coach falls back to Google's Gemini API described below so it can still answer — and in that case the same context is sent to Google. Apple's handling is governed by Apple's <a href="https://www.apple.com/legal/privacy/" rel="noopener">Privacy Policy</a>.</p>
+<p><strong>On iPhones without Apple Intelligence</strong>, the coach uses <strong>Google's paid Gemini API</strong>. Under Google's terms for that tier, your prompts and responses are <strong>not used to train or improve Google's models</strong>; Google retains them only briefly for abuse-detection, safety and legal purposes. The data leaves your device to Google, so if you would prefer that nothing be sent to a third party, simply do not use the coach — every figure the coach uses is also shown in the app itself. Google's handling is governed by the <a href="https://ai.google.dev/gemini-api/terms" rel="noopener">Google Gemini API terms</a> and the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.</p>
 
 <h3>(b) Current weather &amp; race-day forecast — Apple WeatherKit</h3>
 <p>To show current conditions and your race-day forecast, RunMode sends your device's location to <strong>Apple WeatherKit</strong>. This is handled by Apple under Apple's own privacy terms. See Apple's <a href="https://www.apple.com/legal/privacy/" rel="noopener">Privacy Policy</a> and the <a href="https://weatherkit.apple.com/legal-attribution.html" rel="noopener">Apple Weather data sources</a>.</p>
@@ -76,7 +76,7 @@
 <table>
   <tr><th>Activity</th><th>Lawful basis (Art. 6)</th><th>Special-category condition (Art. 9)</th></tr>
   <tr><td>On-device processing of your Health data</td><td>Consent — you grant Apple Health access and choose to use the app</td><td>Explicit consent</td></tr>
-  <tr><td>Sending coaching data to Google Gemini</td><td>Consent — the coach is optional; you choose to use it</td><td>Explicit consent</td></tr>
+  <tr><td>Processing coaching data (Apple Intelligence, or Google Gemini)</td><td>Consent — the coach is optional; you choose to use it</td><td>Explicit consent</td></tr>
   <tr><td>Sending location for weather</td><td>Consent — you grant location access for the weather features</td><td>Not applicable (location is not special-category data)</td></tr>
 </table>
 <p>You can withdraw consent at any time by turning off the relevant feature, revoking permissions in iOS Settings, or deleting the app. Withdrawing consent does not affect processing that already happened.</p>
