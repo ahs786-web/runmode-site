@@ -31,12 +31,12 @@
 <body>
 
 <h1>RunMode — Privacy Policy</h1>
-<p class="updated">Last updated: 6 October 2026</p>
+<p class="updated">Last updated: 8 October 2026</p>
 
-<p class="lead">RunMode is a running and endurance-training app for iPhone. It is built around a simple principle: your training and health data stays on your device. This policy explains the few things that leave your device, who receives them, and why — in plain English.</p>
+<p class="lead">RunMode is a running and endurance-training app for iPhone, with a companion Apple Watch app. It is built around a simple principle: your training and health data stays on your device. This policy explains the few things that leave your device, who receives them, and why — in plain English.</p>
 
 <div class="box">
-<strong>The short version.</strong> Almost everything RunMode does happens on your iPhone. Your Apple Health data, the runs you record, routes, personal bests, notes and coach conversations are stored and processed on your devices and are never sent to us — in fact, there is no RunMode server and we never see your data. A few optional features send a limited amount of data off your device: the AI coach (to Google) and weather (to Apple and to Open-Meteo). We do not track you, run no analytics, show no ads, and never sell your data.
+<strong>The short version.</strong> Almost everything RunMode does happens on your iPhone. Your Apple Health data, the runs you record, routes, personal bests, notes and coach conversations are stored and processed on your devices and are never sent to us — in fact, there is no RunMode server and we never see your data. A few optional features send a limited amount of data off your device: the AI coach (to Google, only for people aged 18 and over and only after you allow it) and weather (to Apple and to Open-Meteo). We do not track you, run no analytics, show no ads, and never sell your data.
 </div>
 
 <h2>1. Who we are</h2>
@@ -50,21 +50,35 @@
 <h2>2. What stays on your device</h2>
 <p>When you grant RunMode permission to read Apple Health, and when you record runs, the app processes the following <strong>entirely on your iPhone and Apple Watch</strong>. This data is not transmitted to us and there is no account or cloud sync:</p>
 <ul>
-  <li>Runs you record in the app, on your iPhone or Apple Watch — the precise GPS route (recorded while the app is open, in the background or with the screen locked; on iPhone a blue location indicator shows while it records in the background), heart rate, distance and time. With your permission each run is saved to Apple Health as a workout with its route, heart rate and an estimated calorie burn. RunMode never uploads your precise route — a run's route and heart rate only leave your device if you export the run yourself (a GPX or TCX file, including Send to Strava) through your own share sheet;</li>
+  <li>Runs you record in the app, on your iPhone or Apple Watch — the precise GPS route (recorded while the app is open, in the background or with the screen locked; on iPhone a blue location indicator shows while it records in the background), heart rate, distance and time. With your permission each run is saved to Apple Health as a workout with its route, heart rate and an estimated calorie burn. RunMode never uploads your precise route — a run's route and heart rate only leave your device if you export the run yourself (a GPX or TCX file, including Send to Strava) through your own share sheet, or share a run card yourself (an image you share, save to Photos or copy). A run card's route is a plain line with no map, its start and finish are removed, and it shows heart rate only if you turn that on. Saving a card to Photos uses add-only access: RunMode can add the image to your library but cannot see or read your photos;</li>
   <li>Motion-sensor readings during a run — on your iPhone to flag a recording that looks like a drive or a bike ride, and on your Apple Watch for cadence, climb and indoor distance;</li>
   <li>Workouts and routes (runs, rides, swims, walks), heart rate and resting heart rate, and sleep;</li>
   <li>Derived training information — readiness scores, training load, heart-rate zones, personal bests, and route history;</li>
   <li>Anything you enter in the app — check-ins, symptoms, subjective feel notes, event/race plans, and your AI-coach conversations;</li>
-  <li>Your age, sex and weight, used only on-device to estimate heart-rate zones and guidance when you have not set values yourself.</li>
+  <li>Your date of birth (or the age you set in Profile), sex and weight, used on your device to estimate heart-rate zones, the calorie estimate for runs you record, and guidance when you have not set values yourself. Your date of birth, exact age, sex and weight never leave your device. If you use the AI coach, it is told only your age range (for example 35–39), as described in section 3(a);</li>
+  <li>The RunMode Apple Watch app exchanges data (such as live run details and settings) only with the RunMode app on your iPhone, and saves its runs to Apple Health. It sends nothing to the internet itself.</li>
 </ul>
-<p>Because this data lives on your device, <strong>you control it directly</strong> — deleting the app removes it, and coach conversations can be cleared inside the app at any time (Profile → clear conversations).</p>
+<p>Because this data lives on your device, <strong>you control it directly</strong> — deleting the app removes it, and coach conversations can be cleared inside the app at any time (Profile → Coach → Clear all coach conversations, or one conversation from inside the chat).</p>
 
 <h2>3. What leaves your device</h2>
-<p>There are exactly three features that send data off your device, each to a named third party, each only to make that feature work.</p>
+<p>There are exactly three features that send data off your device, each to a named third party, each only to make that feature work. As with any internet request, each provider also receives your device's IP address in order to reply; we never send it an account or device identifier.</p>
 
-<h3>(a) The AI coach — Google Gemini (optional)</h3>
-<p>The AI coach runs only if you use it — by opening a coach chat, or through coaching notifications (on by default; you can turn them off in Profile → Notifications). When it runs, your question and the training context needed to answer it are sent to <strong>Google's Gemini API</strong>, which writes the reply. The context can include: your readiness score and what fed it, recent workout summaries (activity type, distance, duration, pace, heart-rate zones, training-load ratio), sleep hours, any symptoms or feel notes you logged, your target event, your age, and the messages you type. In every case we <strong>do not</strong> send your name, email address, precise location, or any account identifier.</p>
-<p>Under Google's terms, your prompts and responses are <strong>not used to train or improve Google's models</strong>; Google retains them only briefly for abuse-detection, safety and legal purposes. The data leaves your device to Google, so if you would prefer that nothing be sent to a third party, simply do not use the coach — every figure the coach uses is also shown in the app itself. Google's handling is governed by the <a href="https://ai.google.dev/gemini-api/terms" rel="noopener">Google Gemini API terms</a> and the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.</p>
+<h3>(a) The AI coach — Google Gemini (optional, only after you allow it)</h3>
+<p><strong>Nothing is sent until you allow it.</strong> Before the coach sends anything, RunMode asks whether you want to use it and explains what it sends. Nothing goes to Google unless you tap <strong>Allow</strong>. If you choose <strong>Not now</strong>, the coach stays off and nothing is sent. You can turn the coach on or off at any time in <strong>Profile → Coach</strong>; once it is off, nothing more is sent.</p>
+<p><strong>The AI coach is only for people aged 18 and over.</strong> If RunMode doesn't know your age, it asks you to confirm that you are 18 or over before you can allow the coach. If your age in Apple Health or in Profile is under 18, the coach stays off and nothing is sent to Google (see section 9).</p>
+<p>When the coach is on, your question and the training details needed to answer it are sent to <strong>Google's Gemini API</strong>, which writes the reply. This covers coach chats and coaching notifications. Coaching notifications are short notes the coach writes when something in your training changes, for example your training load rising quickly. They use the coach too, so they only start once you have allowed it, and you can switch them off separately in Profile → Notifications. A coaching notification sends only the one fact it is about (for example your training-load ratio, your recent intensity mix, the dates of your recent hard runs, or how long it has been since your last run), not your wider data.</p>
+<p>A coach chat can send, depending on where you open it:</p>
+<ul>
+  <li>your messages and the recent conversation;</li>
+  <li>your age range (for example 35–39), if RunMode knows your age from Apple Health or from the age you set in Profile. It lets the coach compare your numbers with typical figures for your age group, and the coach is told that your own measured data comes first. Your date of birth and exact age are never sent;</li>
+  <li>today's state: your readiness score and its sleep, training-load and symptom breakdown, your training-load ratio and trend, this week's training by sport and intensity mix, last night's sleep, your usual sleep and sleep target, and any symptoms, feelings or effort rating you logged today;</li>
+  <li>the run being discussed: its name and date, distance, time, pace and splits, laps, heart rate and heart-rate zones, elevation gain, cadence and other running measurements, best efforts, your effort rating, and the temperature and humidity recorded at the run;</li>
+  <li>your recent training: recent workouts (activity, date, duration, distance, average heart rate), your last few check-ins (energy rating, body signals and notes), past races and their results, VO₂max, resting heart rate and personal bests;</li>
+  <li>your target event: its name, date, distance, goal time and pace, training block, any training notes you wrote for the coach, the course elevation from a GPX file you imported (and the file's name), and the race-day forecast temperature.</li>
+</ul>
+<p>We <strong>never</strong> send your name, email address, location or GPS route, your date of birth or exact age, your sex or weight, or any account or device identifier. If your heart-rate zones are estimated from your age, the coach is told only that they are an estimate, not the estimated maximum heart rate itself.</p>
+<p>The coach gives training guidance, not medical advice: it does not diagnose or treat any condition and is no substitute for a doctor.</p>
+<p>Under Google's terms, your prompts and responses are <strong>not used to train or improve Google's models</strong>. Google keeps them for a limited period only, to detect abuse and for safety and legal purposes. The data does leave your device to Google, so if you would prefer that nothing be sent to a third party, leave the coach off. The rest of the app works without it, and every figure the coach uses is also shown in the app itself. Google's handling is governed by the <a href="https://ai.google.dev/gemini-api/terms" rel="noopener">Google Gemini API terms</a> and the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.</p>
 
 <h3>(b) Current weather &amp; race-day forecast — Apple WeatherKit</h3>
 <p>To show current conditions and your race-day forecast, RunMode sends your device's location to <strong>Apple WeatherKit</strong>. This is handled by Apple under Apple's own privacy terms. See Apple's <a href="https://www.apple.com/legal/privacy/" rel="noopener">Privacy Policy</a> and the <a href="https://weatherkit.apple.com/legal-attribution.html" rel="noopener">Apple Weather data sources</a>.</p>
@@ -77,11 +91,11 @@
 <table>
   <tr><th>Activity</th><th>Lawful basis (Art. 6)</th><th>Special-category condition (Art. 9)</th></tr>
   <tr><td>On-device processing of your Health data</td><td>Consent — you grant Apple Health access and choose to use the app</td><td>Explicit consent</td></tr>
-  <tr><td>Processing coaching data (Google Gemini)</td><td>Consent — the coach is optional; you choose to use it</td><td>Explicit consent</td></tr>
+  <tr><td>Processing coaching data (Google Gemini)</td><td>Consent: you tap Allow on the AI coach screen before anything is sent (confirming you are 18 or over if RunMode doesn't know your age), and can turn it off in Profile → Coach</td><td>Explicit consent</td></tr>
   <tr><td>Recording your runs — precise route, heart rate and distance, processed on your devices and saved to Apple Health with your permission</td><td>Consent — you choose to record a run and grant location and Apple Health access</td><td>Explicit consent (for the heart-rate data a run records)</td></tr>
   <tr><td>Sending location for weather</td><td>Consent — you grant location access for the weather features</td><td>Not applicable (location is not special-category data)</td></tr>
 </table>
-<p>You can withdraw consent at any time by turning off the relevant feature, revoking permissions in iOS Settings, or deleting the app. Withdrawing consent does not affect processing that already happened.</p>
+<p>You can withdraw consent at any time by turning off the relevant feature (for the AI coach, Profile → Coach), revoking permissions in iOS Settings, or deleting the app. Withdrawing consent does not affect processing that already happened.</p>
 
 <h2>5. What we do not do</h2>
 <ul>
@@ -89,6 +103,7 @@
   <li>We do not track you across apps or websites (the app declares no tracking).</li>
   <li>We use no analytics, advertising, or third-party tracking SDKs.</li>
   <li>We never sell or rent your data.</li>
+  <li>We never use your Apple Health data for advertising, marketing or data mining, and we share it with no one except to make the features in section 3 work (the AI coach only with your permission), or when you export or share a run yourself.</li>
 </ul>
 
 <h2>6. International transfers</h2>
@@ -96,7 +111,7 @@
 
 <h2>7. How long data is kept</h2>
 <ul>
-  <li><strong>On your device:</strong> for as long as the app is installed. You can delete it at any time, and coach conversations can be cleared in-app.</li>
+  <li><strong>On your device:</strong> for as long as the app is installed. You can delete it at any time, and coach conversations can be cleared in-app (Profile → Coach).</li>
   <li><strong>Google / Apple / Open-Meteo:</strong> according to their own retention terms (for Gemini, brief retention for abuse, safety and legal purposes only, as described above).</li>
 </ul>
 
@@ -104,8 +119,8 @@
 <p>Under the UK GDPR you have the right to access, rectify, erase, restrict or object to the processing of your personal data, and the right to data portability, and to withdraw consent. Because almost all of your data is held on your own device, you can exercise most of these rights directly — you have access to it in the app, and deleting the app or clearing conversations erases it. For anything you cannot do yourself, contact us at <a href="mailto:info@runmode.app">info@runmode.app</a>.</p>
 <p>If you are unhappy with how we have handled your data, you can complain to the UK Information Commissioner's Office (ICO) at <a href="https://ico.org.uk" rel="noopener">ico.org.uk</a>, though we would appreciate the chance to put things right first.</p>
 
-<h2>9. Children</h2>
-<p>RunMode is a general-audience fitness app and is not directed at children. We do not knowingly process the data of children under 16.</p>
+<h2>9. Age</h2>
+<p>RunMode is intended for people aged 18 and over. The AI coach is only for people aged 18 and over, under Google's Gemini API terms; if you tell us you're under 18 (or Apple Health does), the coach stays off and nothing is sent to Google. We don't verify age.</p>
 
 <h2>10. Changes to this policy</h2>
 <p>We may update this policy from time to time. Material changes will be reflected here with a new "Last updated" date.</p>
